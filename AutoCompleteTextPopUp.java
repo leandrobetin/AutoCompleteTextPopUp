@@ -152,7 +152,7 @@ public class AutoCompleteTextPopUp {
             public void keyReleased(KeyEvent ke) {
                
                 textoDigitado = txtComponent.getText().toUpperCase();
-               // if(textoDigitado.length() <= 2){ windowMain.setVisible(false); return;}
+                if(textoDigitado.length() <= 2){ windowMain.setVisible(false); return;}
                 
                 if(ke.getKeyCode() == KeyEvent.VK_DOWN){
                     

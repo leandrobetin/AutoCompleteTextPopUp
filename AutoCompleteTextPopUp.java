@@ -103,6 +103,47 @@ public class AutoCompleteTextPopUp {
            
         }catch(Exception e){e.printStackTrace();}
         
+        
+        dialogBase.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent me) {
+                
+            }
+
+            @Override
+            public void mousePressed(MouseEvent me) {
+               
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent me) {
+               
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent me) {
+                if(me.getSource() instanceof JWindow){//clicou na windowMain
+                    
+                }else{//clicou fora da windowMain
+                    
+                    if(me.getSource() instanceof JTextField){
+                        if(!((JTextField) me.getSource()).equals(txtComponent)){
+                            windowMain.setVisible(false);
+                        }
+                    }else{
+                         windowMain.setVisible(false);
+                    }
+                }
+                   
+                
+            }
+
+            @Override
+            public void mouseExited(MouseEvent me) {
+               
+            }
+        });
+        
     }
     
     
